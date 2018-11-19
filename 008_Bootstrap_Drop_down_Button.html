@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>008 Bootstrap Drop Down Button</title>
+        
+        <!-- Bootstrap -->
+        <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    
+    </head>
+<body>
+
+<!--data-toggle dropdown is not working -->
+
+    <div class="dropdown">
+    	<button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Article<span class="navbar-toggler-icon"></span></button>
+        	<ul class="dropdown-menu">
+            	<li><a href="#">Technology</a></li>
+                <li><a href="#">Science</a></li>
+                <li><a href="#">Health</a></li>
+                <li><a href="#">Economy</a></li>
+                <li class="dropdown-divider"></li>
+                <li class="dropdown-header">Personal</li>                
+                <li><a href="#">Log Out</a></li>            	
+            </ul>    
+    </div>
+    
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+    <script src="js/jquery-1.11.3.min.js"></script>
+    
+    <!-- Include all compiled plugins (below), or include individual files as needed --> 
+    <script src="js/bootstrap.js"></script>
+</body>
+</html>

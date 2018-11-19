@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>003 Bootstrap Text Styles</title>
+        <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+        
+        <script src="js/bootstrap.bundle.js"></script>
+        
+		<script src="js/jquery-3.3.1.js"></script>
+        
+    </head>
+
+<body>
+
+	<div class="container-fluid">
+    
+		<h1>H1 Heading <small> H1 Heading small</small></h1>
+        <h2>H2 Heading</h2>
+        <h3>H3 Heading</h3>
+        <h4>H4 Heading</h4>
+        <h5>H5 Heading</h5>
+        <h6>H6 Heading</h6>
+        
+        <blockquote class="blockquote">The Blockquote Area</blockquote>
+        
+        <blockquote class="blockquote-reverse">The Blockquote Reverse Area</blockquote>
+        
+		<p>The <abbr title="The Abbreviation tag">&quot;Abbr&quot;</abbr>connects the world to each other.</p>        
+
+		<mark>This is the Mark.</mark>
+        
+        <dl class="dl-horizontal">
+        	<dt>The DL and DT Tag</dt>
+            <dd>- with indention 
+            <dt>Internet</dt>
+            <dd>- with indention again</dd>            
+        
+        </dl>        
+        
+        <pre>
+        		The quick 		brown			fox
+                	jumps	over the	lazy	dog.
+        
+        </pre>
+        
+        <p class="text-success bg-success">This is the sample of Text Success.</p>
+		<p class="text-danger bg-danger">This is the sample of Text Danger.</p>
+        <p class="text-info bg-info">This is the sample of Text Info.</p>
+        <p class="text-primary bg-primary">This is the sample of Text Primary.</p>
+        <p class="text-muted">This is the sample of Text muted.</p>
+        <p class="text-warning">This is the sample of text warning.</p>
+        
+        <p class="lead">The new Paragraph sample for &quot;Lead&quot;</p>
+        <p class="small">The new Paragraph sample for &quot;small&quot;</p>
+        <p class="text-right">The new Paragraph sample for &quot;text-right&quot;</p>
+        <p class="text-center">The new Paragraph sample for &quot;text-center&quot;</p>
+        <p class="text-left">The new Paragraph sample for &quot;text-left&quot;</p>
+        <p class="text-uppercase">The new Paragraph sample for &quot;text-uppercase&quot;</p>
+        <p class="text-lowercase">The new Paragraph sample for &quot;text-lowercase&quot;</p>
+
+    
+    </div>
+</body>
+</html>

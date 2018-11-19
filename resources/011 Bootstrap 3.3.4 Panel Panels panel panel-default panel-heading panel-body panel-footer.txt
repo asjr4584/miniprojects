@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>011 Bootstrap Panels</title>
+        
+        <!-- Bootstrap -->
+        <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+        <link href="css/bootstrap3.3.4.css" rel="stylesheet" type="text/css">
+        
+    </head>
+
+<body>
+
+	<div class="container">
+    
+    	<div class="panel panel-default">
+        	<div class="panel-heading">
+            	<h4>This is the Panel Heading</h4>
+            </div>
+            <div class="panel-body">
+            	<h4>This is the Panel Body</h4>
+            </div>
+            <div class="panel-footer">
+            	<h4>This is the Panel Footer</h4>
+            </div>
+        </div>
+        
+        <div class="panel panel-primary">
+        	<div class="panel-heading">
+            	<h4>This is the Panel Heading</h4>
+            </div>
+            <div class="panel-body">
+            	<h4>This is the Panel Body</h4>
+            </div>
+            <div class="panel-footer">
+            	<h4>This is the Panel Footer</h4>
+            </div>
+        </div>
+        
+        <div class="panel panel-success">
+        	<div class="panel-heading">
+            	<h4>This is the Panel Heading</h4>
+            </div>
+            <div class="panel-body">
+            	<h4>This is the Panel Body</h4>
+            </div>
+            <div class="panel-footer">
+            	<h4>This is the Panel Footer</h4>
+            </div>
+        </div>
+        
+        <div class="panel panel-warning">
+        	<div class="panel-heading">
+            	<h4>This is the Panel Heading</h4>
+            </div>
+            <div class="panel-body">
+            	<h4>This is the Panel Body</h4>
+            </div>
+            <div class="panel-footer">
+            	<h4>This is the Panel Footer</h4>
+            </div>
+        </div>
+        
+        <div class="panel panel-danger">
+        	<div class="panel-heading">
+            	<h4>This is the Panel Heading</h4>
+            </div>
+            <div class="panel-body">
+            	<h4>This is the Panel Body</h4>
+            </div>
+            <div class="panel-footer">
+            	<h4>This is the Panel Footer</h4>
+            </div>
+        </div>
+        
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+    <script src="js/jquery-1.11.3.min.js"></script>
+    
+    <!-- Include all compiled plugins (below), or include individual files as needed --> 
+    <script src="js/bootstrap.js"></script>
+</body>
+</html>

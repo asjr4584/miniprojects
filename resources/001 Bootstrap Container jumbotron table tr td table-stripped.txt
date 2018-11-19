@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Bootstrap Container</title>
+		
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+
+		<script src="js/bootstrap.bundle.js"></script>
+
+		<script src="js/jquery-3.3.1.js"></script>
+	</head>
+
+<body>
+
+	<div class="jumbotron">
+    	<h1>Hello</h1>
+        
+        <table class="table table-striped">
+        	<tr>
+            	<td>1</td>
+            	<td>2</td>
+            	<td>3</td>                                             
+            </tr>
+        	<tr>
+            	<td>1</td>
+            	<td>2</td>
+            	<td>3</td>                                             
+            </tr>
+        	<tr>
+            	<td>1</td>
+            	<td>2</td>
+            	<td>3</td>                                             
+            </tr>
+
+        </table>
+        
+    </div>
+
+
+	<div class="container"> <!--responsive layout-->
+    	
+		<header class="jumbotron">
+        	<h1>Heading with class container</h1>
+        </header>
+        
+    </div>
+    
+    <div class="container-fluid"> <!--responsive layout-->
+    	
+		<header class="jumbotron">
+        	<h1>Heading with Class container fluid</h1>
+        </header>
+                
+    </div>
+</body>
+</html>

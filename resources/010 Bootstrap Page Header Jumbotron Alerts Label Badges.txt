@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>010 Page Header, Jumbotron, Alerts, Label, and Badges</title>
+        
+        <!-- Bootstrap -->
+        <link href="css/bootstrap.css" rel="stylesheet" type="text/css">    
+    </head>
+<body>
+
+	<div class="container-fluid">
+
+<!-- Page Header using Jumbotron-->
+
+    	<div class="jumbotron">
+        	<h1>The Jumbotron Class</h1>        
+        </div>
+        
+        <h1> The Header Without Jumbotron</h1>
+        
+        <div class="card-header">The Page Header using Card-Header class</div><br>
+
+		<div class="card-header-pills">The Page Header using Card-Header Pills class</div><br>
+        
+		<div class="card-header-tabs">The Page Header using Card-Header Tabs class</div><br>
+        
+		<div class="dropdown-header">The Page Header using Dropdown Header class</div><br>
+
+<!-- Fade in Alert is not working -->
+        
+        <div class="alert alert-danger"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>The file will be deleted!</div>
+     
+        <div class="alert alert-success"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>The file will be deleted!</div>
+
+        <div class="alert alert-warning"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>The file will be deleted!</div>        
+        
+		<div class="alert alert-info"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>The file will be deleted!</div>        
+
+<!-- Badges -->
+
+
+	<a href="#">Messages<span class="badge badge-info">6</span></a><br>
+    <a href="#">Notification<span class="badge badge-primary">29</span></a>
+    
+    <button class="btn btn-primary">Click to see the notification <span class="badge">310</span></button>
+
+<!-- Label class is not working-->	
+
+	<div class="card-header">
+    
+    	<h3>Downloads<span class="col-form-label">Beta</span></h3>
+        
+    </div>
+          
+</div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+    <script src="js/jquery-1.11.3.min.js"></script>
+    
+    <!-- Include all compiled plugins (below), or include individual files as needed --> 
+    <script src="js/bootstrap.js"></script>
+</body>
+</html>
