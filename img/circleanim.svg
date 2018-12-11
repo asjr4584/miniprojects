@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="100%" height="100%" viewBox="-100 -100 200 200" preserveAspectRatio="xMidYMid" onload="Init(evt)" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" baseProfile="full">
+<title>JS DOM Manipulation and Animation</title>
+<rect style="fill:white" x="-500" y="-500" width="1000" height="1000"/>
+<text x="-100" y="90">overall fps: <tspan id="fps">-</tspan></text>
+
+<script type="text/ecmascript"><![CDATA[
+	var svgDoc,svgRoot;
+	var desiredFramesPerSecond=200;
+	var msPerFrame = 1000/desiredFramesPerSecond;
+	
+	var circles=[];
+	var colors=['red','blue','green','yellow','purple','orange','violet'];
+
+	var frameCt=0;	
+	
+	function Init(evt){
+		svgDoc = evt.target.ownerDocument;
+		svgRoot = svgDoc.documentElement;
+		
+		for (var i=0;i<20;i++){
+			var radius = Math.random()*4+2;
+			var locX = Math.random()*80-40;
+			var locY = Math.random()*80-40;
+			var color = colors[Math.round(Math.random()*(colors.length-1))];
+			var circle = NewObj('circle',{fill:color,cx:locX, cy:locY, r:radius},svgRoot);
+			circles.push( circle );
+		}
+		setTimeout("AnimateEm()",1000);
+	}
+
+	function AnimateEm(){
+		if (frameCt==0) startTime = new Date();
+		setTimeout("AnimateEm()",msPerFrame);
+
+		frameCt++;
+		for (var i=0,len=circles.length;i<len;i++){
+			var circle = circles[i];
+			circle.cx.baseVal.value += Math.random()*4-2;
+			circle.cy.baseVal.value += Math.random()*4-2;
+		}
+
+		if ((frameCt%desiredFramesPerSecond*2)==0){
+			var actualFPS = frameCt/(new Date() - startTime)*1000;
+			svgDoc.getElementById('fps').firstChild.nodeValue=actualFPS.toFixed(1);
+		}
+
+	}
+
+	function NewObj(kind,props,dad,text){
+		//Creates a new object with properties, and optionally appends to a parent element.
+		//   kind  is the element type, e.g. 'rect'
+		//   props is an object of properties, e.g. { width:200, height:100, 'stroke-color':'red' } (optional)
+		//   dad   is the parent object to append this to  (optional)
+		//   text  is content text to be embedded in the object  (optional)
+	
+		var el=svgDoc.createElementNS("http://www.w3.org/2000/svg",kind);
+		if (props!=null) for (var a in props){
+			el.setAttributeNS(/^xlink:/.test(a)?'http://www.w3.org/1999/xlink':null,a,props[a]);
+		}
+		if (dad) dad.appendChild(el);
+		if (text) el.appendChild(document.createTextNode(text));
+		return el;
+	}
+
+
+
+]]></script>
+
+</svg>
