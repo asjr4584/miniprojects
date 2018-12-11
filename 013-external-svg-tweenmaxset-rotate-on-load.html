@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>無題ドキュメント</title>
+	<link href="css/013-external-svg-tweenmaxset-rotate-on-load.css" rel="stylesheet">		
+	<!--script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script-->
+	<!--script type="text/javascript" src="js/TweenMax.js"></script-->
+	<!--script type="text/javascript" src="js/TweenMax.min.js"></script-->	
+</head>
+
+<body>
+	<img id="image" src="https://www.google.com/images/srpr/logo3w.png">
+	<embed id="sample" src="img/planet-earth-svgrepo-com.svg" type="image/svg+xml" />
+	<!--script type="text/javascript" src="http://beneposto.pl/jqueryrotate/js/jQueryRotateCompressed.js"></script-->
+	<script>
+		$document.ready(function(){
+			var rotation = function (){
+			   $("#image").rotate({
+				  angle:0, 
+				  animateTo:360, 
+				  callback: rotation,
+				  easing: function (x,t,b,c,d){        // t: current time, b: begInnIng value, c: change In value, d: duration
+					  return c*(t/d)+b;
+				  }
+			   });
+			}
+			rotation();
+			});
+	</script>
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>		
+	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+	<script type="text/javascript" src="js/jQueryRotate.js"></script>
+	<!--script type="text/javascript" src="js/013.js"></script-->
+	<!--script type="text/javascript" src="http://beneposto.pl/jqueryrotate/js/jQueryRotateCompressed.js"></script-->
+		
+	
+</body>
+</html>

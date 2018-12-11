@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 58 58" style="enable-background:new 0 0 58 58;" xml:space="preserve">
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+	<style>
+    /* <![CDATA[ */
+    	svg .rotate {
+	  animation: rotate 60s linear infinite;
+	  transform-box: fill-box;
+	  transform-origin: 50% 50%;
+	  -webkit-transform-origin: 50% 50%;
+       -moz-transform-origin: 50% 50%;
+        -ms-transform-origin: 50% 50%;
+         -o-transform-origin: 50% 50%;
+	}
+
+	@keyframes rotate {
+	  from { transform: rotate(0deg); }
+	  to { transform: rotate(360deg); }
+	}
+
+	/* ]]> */	
+  </style>
+  	<script type="text/javascript"><![CDATA[
+  		var el1=document.getElementById('ILEW1'),
+		    el2=document.getElementById('ILEW2'),
+		    el3=document.getElementById('ILEW3'),
+		    el4=document.getElementById('ILEW4');
+		   TweenMax.set(el2, {transformOrigin:"50% 50%"})
+		    timeline = new TimelineMax({paused:true});
+
+
+		timeline.to(el2, 10, 
+		  {
+		    rotation: 360, 
+		    transformOrigin:"center",
+		    scale:1.2,
+		    ease: Power0.easeNone,  
+		    repeat:-1
+		  },              
+		0);
+
+		timeline.play();
+	]]></script>
+
+</svg>
+
+<svg width="100%" height="100%" viewBox="0 0 1000 1000" preserveAspectRatio="xMidYMid slice"> 
+  
+  	<g class="rotate">
+	<rect x="0" y="0" width="1000" height="1000" fill="rgba(19, 100, 100, 1)"></rect>    
+	  
+	<rect id="ILEW1" x="100" y="100" width="800" height="800" fill="none" style="stroke: #000066; fill: none; stroke-width: 50px;"></rect> 
+
+	<rect id="ILEW2" x="200" y="200" width="600" height="600" fill="none" style="stroke: #660000; fill: none; stroke-width: 50px;" vector-effect="on-scaling-stroke"></rect>
+	  
+	<rect id="ILEW3" x="300" y="300" width="400" height="400" fill="none" style="stroke: #000066; fill: none; stroke-width: 50px;"></rect>  
+	  
+	<rect id="ILEW4" x="400" y="400" width="200" height="200" fill="none" style="stroke: #000066; fill: none; stroke-width: 50px;"></rect> 
+	</g>
+
+</svg>
+</svg>
