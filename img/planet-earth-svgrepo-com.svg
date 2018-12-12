@@ -5,30 +5,48 @@
 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
 	<style>
     /* <![CDATA[ */
-    	
+
+    	.notransition {
+		  	/*CSS transitions*/
+			-o-transition-property: none !important;
+			-moz-transition-property: none !important;
+			-ms-transition-property: none !important;
+			-webkit-transition-property: none !important;
+			transition-property: none !important;
+			/*CSS transforms*/
+			-o-transform: none !important;
+			-moz-transform: none !important;
+			-ms-transform: none !important;
+			-webkit-transform: none !important;
+			transform: none !important;
+			/*CSS animations*/
+			-webkit-animation: none !important;
+			-moz-animation: none !important;
+			-o-animation: none !important;
+			-ms-animation: none !important;
+			animation: none !important;
+		}
+
+		svg .rotate {
+			animation: rotate 60s linear infinite;
+			transform-box: fill-box;
+			transform-origin: 50% 50%;
+			-webkit-transform-origin: 50% 50%;
+			-moz-transform-origin: 50% 50%;
+			-ms-transform-origin: 50% 50%;
+			-o-transform-origin: 50% 50%;
+		}
+
+		@keyframes rotate {
+		  from { transform: rotate(0deg); }
+		  to { transform: rotate(360deg); }
+		}
 
 	/* ]]> */	
   </style>
 </svg>
-<!-- Script linked from the outside-->
-    <script xlink:href="http://beneposto.pl/jqueryrotate/js/jQueryRotateCompressed.js"/>
-    <script type="application/javascript">
-      //<![CDATA[
-        alert("Javascript Testing");   	
-		var rotation = function (){
-		   $("#el2").rotate({
-		      angle:0, 
-		      animateTo:360, 
-		      callback: rotation,
-		      easing: function (x,t,b,c,d){        // t: current time, b: begInnIng value, c: change In value, d: duration
-		          return c*(t/d)+b;
-		      }
-		   });
-		}
-		rotation();
-		// ]]>
-	</script>
-<g id="el2">
+
+<g id="el2" class="rotate">
 	<circle style="fill:#285680;" cx="29" cy="29" r="29"/>
 	<g>
 		<path style="fill:#24AE5F;" d="M29,0c-4.03,0-7.866,0.823-11.353,2.308c-0.159,0.949-0.952,2.57-0.928,3.087
@@ -61,4 +79,163 @@
 		s0.375,2.5,2,3c1.373,0.423,3.267,0.842,3.825,0.962c0.008-1.112,0.011-2.141,0.116-2.723C54.876,13.787,49.903,7.555,43.33,3.806z
 		"/>
 </g>
+
+<!-- Script linked from the outside-->
+    <!--script xlink:href="http://beneposto.pl/jqueryrotate/js/jQueryRotateCompressed.js"/-->
+    <script type="application/javascript">
+      //<![CDATA[
+        
+
+        // browser detect
+		var BrowserDetect = {
+		        init: function() {
+				this.browser = this.searchString(this.dataBrowser) || "An unknown browser";
+				this.version = this.searchVersion(navigator.userAgent) || this.searchVersion(navigator.appVersion) || "an unknown version";
+				this.OS = this.searchString(this.dataOS) || "an unknown OS";
+			},
+			searchString: function(data) {
+				for (var i = 0; i < data.length; i++) {
+					var dataString = data[i].string;
+					var dataProp = data[i].prop;
+					this.versionSearchString = data[i].versionSearch || data[i].identity;
+					if (dataString) {
+						if (dataString.indexOf(data[i].subString) != -1) return data[i].identity;
+					} else if (dataProp) return data[i].identity;
+				}
+			},
+			searchVersion: function(dataString) {
+				var index = dataString.indexOf(this.versionSearchString);
+				if (index == -1) return;
+				return parseFloat(dataString.substring(index + this.versionSearchString.length + 1));
+			},
+			dataBrowser: [{
+				string: navigator.userAgent,
+				subString: "Chrome",
+				identity: "Chrome"
+			}, {
+				string: navigator.userAgent,
+				subString: "Edge",
+				versionSearch: "Edge",
+				identity: "Edge"	
+			}, {
+				string: navigator.userAgent,
+				subString: "OmniWeb",
+				versionSearch: "OmniWeb/",
+				identity: "OmniWeb"
+			}, {
+				string: navigator.vendor,
+				subString: "Apple",
+				identity: "Safari",
+				versionSearch: "Version"
+			}, {
+				prop: window.opera,
+				identity: "Opera",
+				versionSearch: "Version"
+			}, {
+				string: navigator.vendor,
+				subString: "iCab",
+				identity: "iCab"
+			}, {
+				string: navigator.vendor,
+				subString: "KDE",
+				identity: "Konqueror"
+			}, {
+				string: navigator.userAgent,
+				subString: "Firefox",
+				identity: "Firefox"
+			}, {
+				string: navigator.vendor,
+				subString: "Camino",
+				identity: "Camino"
+			}, { // for newer Netscapes (6+)
+				string: navigator.userAgent,
+				subString: "Netscape",
+				identity: "Netscape"
+			}, {
+				string: navigator.userAgent,
+				subString: "MSIE",
+				identity: "Explorer",
+				versionSearch: "MSIE"
+			}, {
+				string: navigator.userAgent,
+				subString: "Gecko",
+				identity: "Mozilla",
+				versionSearch: "rv"
+			}, { // for older Netscapes (4-)
+				string: navigator.userAgent,
+				subString: "Mozilla",
+				identity: "Netscape",
+				versionSearch: "Mozilla"
+			}],
+			dataOS: [{
+				string: navigator.platform,
+				subString: "Win",
+				identity: "Windows"
+			}, {
+				string: navigator.platform,
+				subString: "Mac",
+				identity: "Mac"
+			}, {
+				string: navigator.userAgent,
+				subString: "iPhone",
+				identity: "iPhone/iPod"
+			}, {
+				string: navigator.platform,
+				subString: "Linux",
+				identity: "Linux"
+			}]
+
+		};
+		BrowserDetect.init();
+
+		///// mobile
+		var isMobile = {
+		    Android: function() {
+		        return navigator.userAgent.match(/Android/i);
+		    },
+		    BlackBerry: function() {
+		        return navigator.userAgent.match(/BlackBerry/i);
+		    },
+		    iOS: function() {
+		        return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+		    },
+		    Opera: function() {
+		        return navigator.userAgent.match(/Opera Mini/i);
+		    },
+		    Windows: function() {
+		        return navigator.userAgent.match(/IEMobile/i);
+		    },
+		    any: function() {
+		        return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+		    }
+		};
+
+		if (BrowserDetect.browser === 'Chrome') {
+			
+						
+			var elem = document.getElementById( 'el2' );
+			elem.classList.add('notransition'); // Add class
+			
+			alert("Javascript Chrome");
+			
+			/*elem.classList.remove('some-other-class'); // Remove class
+			elem.classList.toggle('some-other-class'); // Add or remove class
+			if ( elem.classList.contains('el2') ) { // Check for class
+				console.log('yep!');
+				alert("Javascript Chrome Yep!");
+			}*/
+			
+			//document.getElementById("el2").classList.add("notransition");
+			
+			//var el = document.getElementById('el2')
+			//addClass(el, 'notransition')		
+			
+			//$('#el2').addClass('notransition'); // to remove transition
+			//$('#el2').removeClass('notransition'); // to return to previouse transition
+
+		}		
+
+		// ]]>
+	</script>
+<!--end of script-->	
 </svg>
