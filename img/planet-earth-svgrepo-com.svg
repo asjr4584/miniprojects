@@ -85,7 +85,7 @@
 	<script type="text/javascript" xlink:href="js/jQueryRotateCompressed.js" xlink:actuate="onLoad" xlink:show="other" xlink:type="simple" />
     <!--script xlink:href="http://beneposto.pl/jqueryrotate/js/jQueryRotateCompressed.js"/-->
     <script type="application/javascript">
-      //<![CDATA[
+      /* <![CDATA[ */
         
       	// browser detect      	
 		var winNav = window.navigator;
@@ -297,7 +297,7 @@
 
 			}
 
-		// ]]>
+		/* ]]> */	
 	</script>
 <!--end of script-->	
 </svg>
