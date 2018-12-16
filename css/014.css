@@ -1,0 +1,14 @@
+@charset "utf-8";
+/* CSS Document */
+.foreground {
+/*    background: transparent url("../img/dalasite-new_18-11-20-REVISED-1.png") 0% 0% no-repeat;*/
+	background: transparent url("../img/planet-earth-svgrepo-com.svg") 0% 0% no-repeat;
+    background-size: cover;
+    height: 100vh;
+    left: -60px;
+    position: fixed;
+    top: 0;
+    width: 100%;	
+/*temporary		
+	display:none;	*/
+}
