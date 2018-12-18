@@ -81,8 +81,8 @@
 </g>
 
 <!-- Script linked from the outside-->
-	<script type="text/javascript" xlink:href="http://beneposto.pl/jqueryrotate/js/jQueryRotateCompressed.js" xlink:actuate="onLoad" xlink:show="other" xlink:type="simple" />
-	<script type="text/javascript" xlink:href="js/jQueryRotateCompressed.js" xlink:actuate="onLoad" xlink:show="other" xlink:type="simple" />
+	<!--script type="text/javascript" xlink:href="http://beneposto.pl/jqueryrotate/js/jQueryRotateCompressed.js" xlink:actuate="onLoad" xlink:show="other" xlink:type="simple" /-->
+	<!--script type="text/javascript" xlink:href="js/jQueryRotateCompressed.js" xlink:actuate="onLoad" xlink:show="other" xlink:type="simple" /-->
     <!--script xlink:href="http://beneposto.pl/jqueryrotate/js/jQueryRotateCompressed.js"/-->
     <script type="application/javascript">
       /* <![CDATA[ */
@@ -241,8 +241,8 @@
 			if (isEdge !== null && typeof isEdge !== "undefined" && vendorName !== "Google Inc." && isChrome === false && isfirefox === false){
 			   	
 			   	// This is Microsoft Edge				
-				//var elem = document.getElementById( 'el2' );
-				//elem.classList.add('notransition'); // Add class
+				var elem = document.getElementById( 'el2' );
+				elem.classList.add('notransition'); // Add class
 
 				window.alert('Microsoft Edge');
 				//alert("Microsoft Edge Again");
@@ -272,8 +272,8 @@
 
 			if (isChrome !== null && isOpera === false && isfirefox === false && isEdge === false ) {			
 						
-				var elem = document.getElementById( 'el2' );
-				elem.classList.add('notransition'); // Add class
+				//var elem = document.getElementById( 'el2' );
+				//elem.classList.add('notransition'); // Add class
 				
 				alert("Google Chrome");		
 

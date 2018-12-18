@@ -2,7 +2,7 @@
 /* CSS Document */
 .foreground {
 /*    background: transparent url("../img/dalasite-new_18-11-20-REVISED-1.png") 0% 0% no-repeat;*/
-	background: transparent url("../img/planet-earth-svgrepo-com.svg") 0% 0% no-repeat;
+	background: transparent url("../img/earth.svg") 0% 0% no-repeat;
     background-size: cover;
     height: 100vh;
     left: -60px;
@@ -12,3 +12,40 @@
 /*temporary		
 	display:none;	*/
 }
+
+
+.notransition {
+		  	/*CSS transitions*/
+			-o-transition-property: none !important;
+			-moz-transition-property: none !important;
+			-ms-transition-property: none !important;
+			-webkit-transition-property: none !important;
+			transition-property: none !important;
+			/*CSS transforms*/
+			-o-transform: none !important;
+			-moz-transform: none !important;
+			-ms-transform: none !important;
+			-webkit-transform: none !important;
+			transform: none !important;
+			/*CSS animations*/
+			-webkit-animation: none !important;
+			-moz-animation: none !important;
+			-o-animation: none !important;
+			-ms-animation: none !important;
+			animation: none !important;
+		}
+
+		svg .rotate {
+			animation: rotate 60s linear infinite;
+			transform-box: fill-box;
+			transform-origin: 50% 50%;
+			-webkit-transform-origin: 50% 50%;
+			-moz-transform-origin: 50% 50%;
+			-ms-transform-origin: 50% 50%;
+			-o-transform-origin: 50% 50%;
+		}
+
+		@keyframes rotate {
+		  from { transform: rotate(0deg); }
+		  to { transform: rotate(360deg); }
+		}
