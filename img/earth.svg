@@ -2,7 +2,7 @@
 <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 58 58" style="enable-background:new 0 0 58 58;" xml:space="preserve">
-<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+<!--svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
 	<style>
     /* <![CDATA[ */
 
@@ -44,9 +44,9 @@
 
 	/* ]]> */	
   </style>
-</svg>
+</svg-->
 
-<g id="el2" class="rotate">
+<g id="el2" class="">
 	<circle style="fill:#285680;" cx="29" cy="29" r="29"/>
 	<g>
 		<path style="fill:#24AE5F;" d="M29,0c-4.03,0-7.866,0.823-11.353,2.308c-0.159,0.949-0.952,2.57-0.928,3.087
@@ -84,7 +84,7 @@
 	<!--script type="text/javascript" xlink:href="http://beneposto.pl/jqueryrotate/js/jQueryRotateCompressed.js" xlink:actuate="onLoad" xlink:show="other" xlink:type="simple" /-->
 	<!--script type="text/javascript" xlink:href="js/jQueryRotateCompressed.js" xlink:actuate="onLoad" xlink:show="other" xlink:type="simple" /-->
     <!--script xlink:href="http://beneposto.pl/jqueryrotate/js/jQueryRotateCompressed.js"/-->
-    <script type="application/javascript">
+    <!--script type="application/javascript">
       /* <![CDATA[ */
         
       	// browser detect      	
@@ -272,8 +272,8 @@
 
 			if (isChrome !== null && isOpera === false && isfirefox === false && isEdge === false ) {			
 						
-				//var elem = document.getElementById( 'el2' );
-				//elem.classList.add('notransition'); // Add class
+				var elem = document.getElementById( 'el2' );
+				elem.classList.add('notransition'); // Add class
 				
 				alert("Google Chrome");		
 
@@ -298,6 +298,6 @@
 			}
 
 		/* ]]> */	
-	</script>
+	</script-->
 <!--end of script-->	
 </svg>
