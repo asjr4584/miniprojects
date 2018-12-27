@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>016_Changing_Background_color_upon_clicking_a_button</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content=" "/>
+    <meta property="og:title" content=" "/>
+    <meta property="og:description" content=" "/>
+    <!--link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"-->
+    <!--link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css"-->
+    <link rel="stylesheet" href="css/bootstrap.css">    
+
+  </head>  
+  
+  <body>
+  	<h1>Heading One    </h1>
+    <p>This is just some text for heading 1    </p>
+    
+    <h2>Heading Two </h2>
+    <p>This is just some text for heading 2    </p>
+    
+    <h3>Heading Three </h3>
+    <p>This is just some text for heading 3    </p>
+    
+    
+    <input id="testbutton" type="button" value="Change Div Color" /><br>
+	<input id="testbutton2" type="button" value="Change Entire Page's color" /><br>
+	<input id="testbutton3" type="button" value="Change Div's last child color" /><br>
+	<input id="testbutton4" type="button" value="P even element" /><br>
+	<input id="testbutton5" type="button" value="ID and Class" /><br>    
+    
+    <div>
+    	<p>This is the <strong class="multiple">first </strong> line of text.        </p>
+		<p id="second">This is the <strong>Second</strong> line of text.        </p>
+    </div>
+    
+
+    	<p>This is the <strong class="multiple">third</strong> line of text.        </p>
+		<p>This is the <strong>fourth</strong> line of text.        </p>
+
+    
+
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <!--script src="https://code.jquery.com/jquery-2.1.4.min.js"></script-->
+    <!--script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script-->
+    
+	<script type="text/javascript">
+		$(document).ready(function() {
+			
+			$("h1 > p, h2 > p, h3 > p").hide();
+			
+			$("h1, h2, h3").click(function() {
+				$(this).next().slideToggle(300);                
+            });
+			
+			$("h1, h2, h3").mouseenter(function() {
+                $(this).css("background-color", "#94C4EC");
+            });
+			
+			$("h1, h2, h3").mouseleave(function() {
+                $(this).css("background-color", "#C918B2");
+				$("*").unbind(mouseleave);
+            });			
+			
+			$("#testbutton").click(function() {
+				$("div, strong, #testbutton").css("background-color", "red");                
+            });
+
+			$("#testbutton2").click(function() {
+				$("*").css("background-color", "yellow");                
+            });
+
+			$("#testbutton3").click(function() {
+				$("div > p:last-child").css("background-color", "green");                
+            });
+
+			$("#testbutton4").click(function() {
+				$("p:even").css("background-color", "blue");                
+            });
+			
+			$("#testbutton5").click(function() {
+				$(".multiple, #second").css("background-color", "pink");                
+            });
+			
+			$("strong").click(function() {
+				$(this).css("background-color", "violet");                
+            });
+			
+			$("h1")
+
+        });
+		
+		
+    </script>
+    
+  </body>
+</html>

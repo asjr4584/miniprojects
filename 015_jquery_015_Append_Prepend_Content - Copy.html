@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>015 Append Prepend Content</title>
+     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content="OpenSource Cross-browser jQuery plugin to rotate image by any-angle with an animation support."/>
+    <meta property="og:title" content="jQueryRotate - rotate image in browser by any angle"/>
+    <meta property="og:description" content="OpenSource Cross-browser jQuery plugin to rotate image by any-angle with an animation support."/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/014.css">   
+
+  </head>  
+  
+  <body>
+  	<p id="demo">Hi </p>
+    <p id="appenPrepend">1</p>
+    
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script src="js/jQueryRotateCompressed.js"></script>
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/scrolling-nav.js"></script>
+    
+	<script type="text/javascript">
+		$(document).ready(function() {
+			
+				$(function() {
+				$("#demo").append("David");			
+				
+				$("#appenPrepend").append("2");
+				$("#appenPrepend").prepend("1");
+				
+				$("#demo").before("<i>Some Title</i>");
+				$("#demo").after("<i>Welcome</i>");
+				
+				var txt = $("<p></p>").text("Adding New Elements");
+				$("#demo").after(txt);
+				
+				var a = $("<span></span>");			
+				$("#appenPrepend").append(a);							
+				
+			});
+            
+        });
+		
+		
+    </script>
+    
+  </body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>017_Jquery_Animation_Changing_Text</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content=" "/>
+    <meta property="og:title" content=" "/>
+    <meta property="og:description" content=" "/>
+    <!--link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"-->
+    <!--link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css"-->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <style type="text/css">
+		h2 {background-color:#F3BB60; position:relative;}    
+    </style>    
+
+  </head>  
+  
+  <body>
+  
+  	<h1>Clicking</h1>
+    <h2>Heading Two</h2>
+    <h3>Heading Three</h3>
+
+    
+    <div>
+    	<h4>Heading four</h4>
+        <p>first line</p>
+        <p>second line</p>        
+        
+        <h5>Heading Five</h5>
+        <p>third line</p>
+        <p>fourth line</p>        
+	    <img id="picture" src="img/newearth.svg" width="200px"/>        
+    </div>
+	
+
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <!--script src="https://code.jquery.com/jquery-2.1.4.min.js"></script-->
+    <!--script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script-->
+    
+	<script type="text/javascript">
+		$(document).ready(function() {
+			
+			$("h1").click(function() {
+				$("h2").animate({
+					"font-size": "toggle",
+					"width": "50%",
+					"left": "+=100px"					
+					}, 1000, function() {
+						$("h3").fadeToggle(1000); 
+						});
+			});
+			
+			$("h1").click(function() {
+				$("#picture").attr("src", "img/earth.svg");                
+            });
+			
+			
+			$("h4").click(function() {
+               $("p").text("new text");
+            });
+			
+			$("h5").click(function() {
+               $("div").html("new <strong>text</strong>");
+            });			
+			
+        });
+		
+		
+    </script>
+    
+  </body>
+</html>
