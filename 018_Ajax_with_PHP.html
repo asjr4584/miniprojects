@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>018_Ajax_with_PHP.html </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content=" "/>
+    <meta property="og:title" content=" "/>
+    <meta property="og:description" content=" "/>
+    <!--link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"-->
+    <!--link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css"-->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <style>
+		body {
+			padding:0;
+			margin:0;
+			}
+		#box {
+			background:gray;
+			text-align:center;
+			padding:10px;
+			color:white;
+			width:500px;
+			margin:0 auto;
+			}
+    </style>    
+
+  </head>  
+  
+  <body>
+  	<div id="box">
+    	<h2>New User Register Here:</h2>
+        <input type="text" name="name" id="name" placeholder="Enter Your Name"/><br/>
+        <input type="text" name="email" id="email" placeholder="Enter Your Email"/><br/>
+        <input type="password" name="pass" id="pass" placeholder="Enter Your Password"/><br/>
+		<input type="submit" name="sub" value="Submit" id="sub"/>
+        <div id="result"></div>
+    </div>
+
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <!--script src="https://code.jquery.com/jquery-2.1.4.min.js"></script-->
+    <!--script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script-->
+    
+	<script type="text/javascript">
+		$(document).ready(function() {
+			
+			$("#sub").click(function() {
+				
+				var user_name = $("#name").val();
+				var user_email = $("#email").val();
+				var user_pass = $("#pass").val();
+				
+                $.post("php/018_ajax.php",{name:user_name,email:user_email,pass:user_pass}, function(data) {
+					
+					$("#result").html(data);
+					
+				});
+            });
+			
+            
+        });
+		
+		
+    </script>
+    
+  </body>
+</html>
