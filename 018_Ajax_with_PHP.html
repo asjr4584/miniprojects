@@ -51,11 +51,23 @@
 				var user_email = $("#email").val();
 				var user_pass = $("#pass").val();
 				
-                $.post("php/018_ajax.php",{name:user_name,email:user_email,pass:user_pass}, function(data) {
+                /*$.post("php/018_ajax.php",{name:user_name,email:user_email,pass:user_pass}, function(data) {
 					
 					$("#result").html(data);
 					
-				});
+				});*/
+				
+				$.ajax({
+					url:'php/018_ajax.php',
+					data:{name:user_name,email:user_email,pass:user_pass},
+					type:'POST',
+					success:function(data){
+						
+						$("#result").html(data);
+						
+						}				
+					
+					});
             });
 			
             
